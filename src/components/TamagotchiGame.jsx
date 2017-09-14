@@ -20,7 +20,7 @@ class TamagotchiGame extends React.Component {
       timeAlive: this.displayTimeAlive(this.birthday)
     };
 
-    this.newTamagotchi = new Tamagotchi("Charlie", "https://image.flaticon.com/icons/svg/447/447518.svg", this.state.isSleeping, this.state.sleep, this.state.food, this.state.play);
+    this.newTamagotchi = new Tamagotchi("Charlie", "https://vignette3.wikia.nocookie.net/uncyclopedia/images/7/7d/Stick_Dancer.gif/revision/latest?cb=20100906180732", this.state.isSleeping, this.state.sleep, this.state.food, this.state.play);
     this.updateTimeAlive = this.updateTimeAlive.bind(this);
     this.increaseSleep = this.increaseSleep.bind(this);
     this.increaseFood = this.increaseFood.bind(this);
@@ -118,9 +118,13 @@ class TamagotchiGame extends React.Component {
       gridTemplateRows: "10%",
       gridGap: "1rem 2%"
     }
+    var contentStyle = {
+      marginLeft: "40%"
+      paddingTop: "200px"
+    }
 
     return (
-      <div>
+      <div style={contentStyle}>
         <img style={avatarStyle} src={this.newTamagotchi.image}></img>
         <h2>{this.newTamagotchi.name}</h2>
         <h4>Birthday: {this.newTamagotchi.birthdayFormatted}</h4>
